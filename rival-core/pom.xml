@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>rival</artifactId>
+        <groupId>net.recommenders.rival</groupId>
+        <version>0.3-SNAPSHOT</version>
+    </parent>
+    <artifactId>rival-core</artifactId>
+    <packaging>jar</packaging>
+    <name>RiVal Core</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.mahout</groupId>
+            <artifactId>mahout-core</artifactId>
+            <version>${mahout.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>asm</groupId>
+                    <artifactId>asm</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>commons-lang</groupId>
+                    <artifactId>commons-lang</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.ranksys.RankSys</groupId>
+            <artifactId>RankSys-core</artifactId>
+            <version>${ranksys.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ranksys.RankSys</groupId>
+            <artifactId>RankSys-fast</artifactId>
+            <version>${ranksys.version}</version>
+        </dependency>    
+    </dependencies>
+</project>
